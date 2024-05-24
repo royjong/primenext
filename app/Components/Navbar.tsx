@@ -17,7 +17,7 @@ const Navbar = () => {
         <nav className="w-full py-5 bg-white shadow-sm">
             <div className="container w-[85%] mx-auto flex justify-between items-center">
                 <div>
-                    <Image src="/logo.png" width={250} height={250} className="w-[100px]" alt="Prime Next" />
+                    <Image src="/logo.png" width={250} height={250} className="w-[50px]" alt="Prime Next" />
                 </div>
                 <div className="hidden md:flex gap-5 items-center">
                     <Link href="/" className="text-gray-800 hover:text-blue-500">Home</Link>
