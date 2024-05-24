@@ -24,24 +24,14 @@ export default function Home() {
     <div style={{ position: "relative" }}>
       <Navbar />
       {/* Hero Section */}
-      <motion.div
-        style={{ opacity, scale }}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, type: "spring", stiffness: 100 }}
-      >
+  
         <Hero />
-      </motion.div>
-
+   
       {/* Aanvraag Section */}
-      <motion.div
-        style={{ opacity, y: slideUp }}
-        initial={{ opacity: 0, y: "20%" }}
-        animate={{ opacity: 1, y: "0%" }}
-        transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
-      >
+  
+   
         <Aanvraag />
-      </motion.div>
+
 
       {/* About Section */}
       <About />
