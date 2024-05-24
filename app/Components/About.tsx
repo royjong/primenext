@@ -2,6 +2,7 @@ import {
   BookOpenIcon,
   ChevronRightIcon,
   MessagesSquareIcon,
+  PersonStanding,
   ThumbsUpIcon,
 } from "lucide-react";
 
@@ -35,14 +36,14 @@ export default function About() {
             <div className="flex">
               {/* Icon */}
               <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border bg-primary text-primary-foreground">
-                <BookOpenIcon className="flex-shrink-0 w-5 h-5" />
+                <PersonStanding className="flex-shrink-0 w-5 h-5" />
               </span>
               <div className="ms-5 sm:ms-8">
                 <h3 className="text-base sm:text-lg font-semibold">
-                  Uitgebreide documentatie
+                    Jij hebt een verzekering nodig...
                 </h3>
                 <p className="mt-1 text-muted-foreground">
-                  Onze uitgebreide documentatie en klantbibliotheken bevatten alles wat een bedrijf nodig heeft om snel en effectief een passende verzekering te vinden.
+                  Jij neemt contact op met ons, en wij sturen je door naar de beste verzekering!
                 </p>
               </div>
             </div>
