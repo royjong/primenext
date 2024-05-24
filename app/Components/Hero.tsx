@@ -13,7 +13,7 @@ export default function HeroFormCenterAlignedWithAForm() {
             {/* Title */}
             <div className="text-center">
               <p className="text-xs font-semibold text-muted-foreground tracking-wide uppercase mb-3">
-                Small business solutions
+                Vind de beste verzekering, voor de laagste prijs met PrimeNext
               </p>
               <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                Goed & goedkoop verzekeren begint met goed advies.
