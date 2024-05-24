@@ -9,19 +9,9 @@ import About from "./Components/About";
 import Footer from "./Components/Footer";
 
 export default function Home() {
-  const { scrollY, scrollYProgress } = useViewportScroll();
-
-  // Opacity and scale animation
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-
-  // Slide-up animation
-  const slideUp = useTransform(scrollYProgress, [0, 0.5], ["20%", "0%"]);
-
-
 
   return (
-    <div style={{ position: "relative" }}>
+    <div>
       <Navbar />
       {/* Hero Section */}
   
