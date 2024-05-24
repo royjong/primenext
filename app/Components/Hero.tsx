@@ -27,21 +27,21 @@ export default function HeroFormCenterAlignedWithAForm() {
                 <div className="flex justify-center -space-x-3">
                   <Avatar className="h-8 w-8 ">
                     <AvatarImage
-                      src="https://github.com/shadcn.png"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwQx7Gk0imPUpYI2w9cIjcODFy_fmjnG9HfKeVq9psjQ&s"
                       alt="@shadcn"
                     />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <Avatar className="h-8 w-8 ">
                     <AvatarImage
-                      src="https://github.com/shadcn.png"
+                      src="https://m.media-amazon.com/images/M/MV5BMTQyZjNiZmQtNmY0Ny00M2U5LWI5Y2YtZjllNGU5MGQyMjUwXkEyXkFqcGdeQXVyMTAwMzUyMzUy._V1_FMjpg_UX1000_.jpg"
                       alt="@shadcn"
                     />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <Avatar className="h-8 w-8 ">
                     <AvatarImage
-                      src="https://github.com/shadcn.png"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9ghnCxHtVEWMedDYOYGfk3NiDoihlGrYNOpzIHa4380iycDHj"
                       alt="@shadcn"
                     />
                     <AvatarFallback>CN</AvatarFallback>
@@ -65,7 +65,7 @@ export default function HeroFormCenterAlignedWithAForm() {
               <div className="pt-5 sm:pt-0 sm:ps-5">
                 <div className="text-lg font-semibold">Trust pilot</div>
                 <div className="text-sm text-muted-foreground">
-                  Rated best over 37k reviews
+                   Gebaseerd op 15 reviews
                 </div>
               </div>
             </div>
