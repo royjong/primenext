@@ -18,12 +18,7 @@ export default function Home() {
   // Slide-up animation
   const slideUp = useTransform(scrollYProgress, [0, 0.5], ["20%", "0%"]);
 
-  // Calculate scrollbar width
-  const scrollbarWidth = useTransform(
-    scrollY,
-    [0, document.body.scrollHeight - window.innerHeight],
-    ["0%", "100%"]
-  );
+
 
   return (
     <div style={{ position: "relative" }}>
@@ -55,10 +50,7 @@ export default function Home() {
       <Footer />
 
       {/* Custom scrollbar */}
-      <motion.div
-        className="custom-scrollbar"
-        style={{ width: scrollbarWidth, height: "4px", backgroundColor: "gray", position: "absolute", bottom: 0, left: 0 }}
-      />
+     
     </div>
   );
 }
