@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import Link from "next/link";
 import Image from "next/image";
@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="w-full py-5 bg-white shadow-sm">
+        <nav className="w-full py-5 bg-white shadow-sm sticky top-0 z-10">
             <div className="container w-[85%] mx-auto flex justify-between items-center">
                 <div>
                     <Image src="/logo.png" width={250} height={250} className="w-[50px]" alt="Prime Next" />

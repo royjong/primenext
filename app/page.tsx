@@ -1,19 +1,64 @@
-import Image from "next/image";
-import Hero from "./Components/Hero";
+"use client"; 
+
+import React from "react";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Navbar from "./Components/Navbar";
+import Hero from "./Components/Hero";
+import Aanvraag from "./Components/Aanvraag";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
-import Aanvraag from "./Components/Aanvraag";
 
 export default function Home() {
-  return ( 
-    <div>
-      <Navbar /> 
-      <Hero /> 
-      <Aanvraag /> 
-      <About /> 
-      <Footer /> 
- 
+  const { scrollY, scrollYProgress } = useViewportScroll();
+
+  // Opacity and scale animation
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+
+  // Slide-up animation
+  const slideUp = useTransform(scrollYProgress, [0, 0.5], ["20%", "0%"]);
+
+  // Calculate scrollbar width
+  const scrollbarWidth = useTransform(
+    scrollY,
+    [0, document.body.scrollHeight - window.innerHeight],
+    ["0%", "100%"]
+  );
+
+  return (
+    <div style={{ position: "relative" }}>
+      <Navbar />
+      {/* Hero Section */}
+      <motion.div
+        style={{ opacity, scale }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, type: "spring", stiffness: 100 }}
+      >
+        <Hero />
+      </motion.div>
+
+      {/* Aanvraag Section */}
+      <motion.div
+        style={{ opacity, y: slideUp }}
+        initial={{ opacity: 0, y: "20%" }}
+        animate={{ opacity: 1, y: "0%" }}
+        transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
+      >
+        <Aanvraag />
+      </motion.div>
+
+      {/* About Section */}
+      <About />
+
+      {/* Footer Section */}
+      <Footer />
+
+      {/* Custom scrollbar */}
+      <motion.div
+        className="custom-scrollbar"
+        style={{ width: scrollbarWidth, height: "4px", backgroundColor: "gray", position: "absolute", bottom: 0, left: 0 }}
+      />
     </div>
   );
 }

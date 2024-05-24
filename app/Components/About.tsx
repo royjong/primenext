@@ -1,3 +1,6 @@
+"use client"; 
+
+import { motion } from "framer-motion";
 import {
   BookOpenIcon,
   ChevronRightIcon,
@@ -8,7 +11,11 @@ import {
 
 export default function About() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Icon Blocks */}
       <div className="container py-24 lg:py-32">
         {/* Grid */}
@@ -33,7 +40,10 @@ export default function About() {
           {/* End Col */}
           <div className="space-y-6 lg:space-y-10">
             {/* Icon Block */}
-            <div className="flex">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex"
+            >
               {/* Icon */}
               <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border bg-primary text-primary-foreground">
                 <PersonStanding className="flex-shrink-0 w-5 h-5" />
@@ -46,10 +56,13 @@ export default function About() {
                   Jij neemt contact op met ons, en wij sturen je door naar de beste verzekering!
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* End Icon Block */}
             {/* Icon Block */}
-            <div className="flex">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex"
+            >
               {/* Icon */}
               <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border bg-primary text-primary-foreground">
                 <MessagesSquareIcon className="flex-shrink-0 w-5 h-5" />
@@ -62,10 +75,13 @@ export default function About() {
                   We dragen actief bij aan open-source projecten en ondersteunen onze klanten door voortdurende ontwikkeling, updates en sponsorschappen.
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* End Icon Block */}
             {/* Icon Block */}
-            <div className="flex">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex"
+            >
               {/* Icon */}
               <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border bg-primary text-primary-foreground">
                 <ThumbsUpIcon className="flex-shrink-0 w-5 h-5" />
@@ -78,7 +94,7 @@ export default function About() {
                   Van zorgverzekeringen tot autoverzekeringen, wij zorgen ervoor dat je een betaalbare en passende verzekering kunt vinden zonder gedoe.
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* End Icon Block */}
           </div>
           {/* End Col */}
@@ -86,6 +102,6 @@ export default function About() {
         {/* End Grid */}
       </div>
       {/* End Icon Blocks */}
-    </>
+    </motion.div>
   );
 }
